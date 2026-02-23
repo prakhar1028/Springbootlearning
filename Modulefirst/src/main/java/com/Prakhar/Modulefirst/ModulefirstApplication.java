@@ -8,8 +8,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class ModulefirstApplication implements CommandLineRunner {
 
+	//@Autowired
+	//Paying p;
 	@Autowired
-	Paying p;
+	Notificatonservice notification;
 	public static void main(String[] args) {
 		SpringApplication.run(ModulefirstApplication.class, args);
 
@@ -18,6 +20,6 @@ public class ModulefirstApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception
 	{
-		p.pay();
+       notification.send("Hello");
 	}
 }
